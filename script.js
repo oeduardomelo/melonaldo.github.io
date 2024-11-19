@@ -1,28 +1,10 @@
-window.sr = ScrollReveal({reset: true})
+// Suavizar rolagem quando clicar em links do menu
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
 
-ScrollReveal().reveal('.home', {
-    delay: 250,
-    rotate: {
-        x:100,
-        y: 0,
-        z: 0
-    }
-});
-
-ScrollReveal().reveal('.sobre', {
-    delay: 250,
-    rotate: {
-        x:100,
-        y: 0,
-        z: 0
-    }
-});
-
-ScrollReveal().reveal('.contato', {
-    delay: 250,
-    rotate: {
-        x:100,
-        y: 0,
-        z: 0
-    }
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
 });
