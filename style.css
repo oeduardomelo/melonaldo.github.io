@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.home, .sobre, .contato {
+    visibility: hidden;
+}
+
+* {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    font-size: 1.5rem;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+#barra-de-navegacao {
+    background: rgba(150, 150, 150, 0.11);
+    border-bottom: solid 1px azure;
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+}
+.barra-de-navegacao {
+    justify-content: center;
+    list-style: none;
+    display: flex;
+
+    &>.logo {
+        &>h4 {
+            padding-right: 5vw;
+            font-size: 1.6rem;
+        }
+    }
+    &>ul {
+        display: flex;
+        list-style: none;
+        &>li {
+            padding: 0 1vw;
+            &>a {
+                text-decoration: none;
+                color: #000000;
+            }
+        }
+    }
+}
+
+/* HOME */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #E6E6FA;
+
+    scroll-margin-top: 50vh;
+
+    &>h1 {
+        font-size: 3rem;
+    }
+
+    &>.home-texto {
+        &>h1 {
+            font-size: 3rem;
+        }
+    }
+
+    &>.home-texto {
+        padding-left: 5vw;
+        &>h2 {
+            font-size: 2rem;
+        }
+    }
+
+    &>.home-imagem {
+        &>img {
+            width: 50vw;
+            padding-right: 5vw;
+        }
+    }
+}
+
+/* SOBRE */
+.sobre {
+    scroll-margin-top: 40vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #F5F5DC;
+    &>h1 {
+        font-size: 3rem;
+    }
+
+    &>.sobre-texto {
+        padding-left: 5vw;
+        &>h2 {
+            font-size: 2rem;
+        }
+    }
+
+    &>.sobre-imagem {
+        &>img {
+            width: 30vw;
+            padding-right: 5vw;
+        }
+    }
+}
+
+/* CONTATO */
+.contato {
+    height: 100vh;
+    background: #FFDAB9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    &>.contato-conteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 80%;
+        &>h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    
+        &>p {
+            text-align: center;
+            margin: 0.5rem 0;
+        }
+    
+        &>.contato-imagem {
+            display: flex;
+            
+            &>div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 1.5rem 2rem;
+    
+                &>a {
+                    display: block;
+                    margin-right: 1rem;
+                    
+                    &>img {
+                        width: 8vw;
+                        max-width: 15vw; 
+                        height: auto;
+                    }
+                }
+    
+                &>p {
+                    display: flex;
+                    text-align: center;
+                    margin: 0;
+                }
+    
+                a:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+/* EQUIPE */
+.equipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #E6E6FA;
+
+    &>div {
+        max-width: 80%;
+        &>h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+    
+        &>.equipe-texto {
+            text-align: center;
+            &>h2 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+        }
+    
+        &>.equipe-membro {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            &>div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 1rem;
+                &>img {
+                    width: 15vw;
+                    height: 15vw;
+                    object-fit: cover;
+                    padding: 0 2vw;
+                }
+                &>h3 {
+                    margin-top: 1rem;
+                    font-size: 1.5rem;
+                }
+                &>p {
+                    text-align: center;
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    } 
+}
